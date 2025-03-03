@@ -73,8 +73,14 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
 
+
  end
 
   root 'home#index'
 end
 
+
+ end
+
+  root 'home#index'
+end
