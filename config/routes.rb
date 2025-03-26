@@ -50,9 +50,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ca9b9fa (The home page is set to something we can pull up)
- end
 =======
-  root 'home#index'
-end
->>>>>>> c87cf15 (The home page is set to something we can pull up)
+>>>>>>> 2f94488 (links to lesson page and link back to homepage works)
+ end
