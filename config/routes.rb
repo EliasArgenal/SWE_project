@@ -28,12 +28,11 @@ Rails.application.routes.draw do
   resources :forum_posts
 
   get "assessment_pages/show"
+
   get "forum_posts/index"
   get "forum_posts/show"
   get "forum_posts/new"
   get "forum_posts/create"
-
-
 
   get "content_pages/show"
 
