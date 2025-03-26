@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   # Home Page
   get '/home', to: 'home#index', as: 'home'
   root 'home#index'
@@ -31,7 +32,9 @@ Rails.application.routes.draw do
   get "forum_posts/show"
   get "forum_posts/new"
   get "forum_posts/create"
+
   get "content_pages/show"
+
   get "lessons/index"
   get "lessons/show"
 
