@@ -45,13 +45,8 @@ Rails.application.routes.draw do
   # Render dynamic PWA files from app/views/pwa/* (remember to link manifest in application.html.erb)
   # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
-<<<<<<< HEAD
-=======
+
 
   # Defines the root path route ("/")
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ca9b9fa (The home page is set to something we can pull up)
-=======
->>>>>>> 2f94488 (links to lesson page and link back to homepage works)
+
  end
