@@ -56,19 +56,19 @@ Rails.application.routes.draw do
 
   get '/login', to: 'sessions#new', as: 'login'
   post '/login', to: 'sessions#create'
-  get "/logout", to: "sessions#destroy", as: '/logout'
-  # Signup route
+  get '/logout', to: 'sessions#destroy', as: 'logout'
+
+  # Signup routes
   get '/signup', to: 'users#new', as: 'signup'
   post '/signup', to: 'users#create'
-
   resources :users, only: [:new, :create]
 
-   # Lessons routes
+  # Lessons routes with nested content/assessment pages
   resources :lessons, only: [:index, :show] do
-    resources :content_pages, only: [:show] # Nested content pages under lessons
-    resources :assessment_pages, only: [:show] # Should only be one assesment page in lesson
+    resources :content_pages, only: [:show]
+    resources :assessment_pages, only: [:show]
   end
-  
+
   # Forum Routes
   get 'forum/general_discussion', to: 'forum_posts#index', defaults: { category: 'general' }, as: 'general_discussion'
   get 'forum/help_support', to: 'forum_posts#index', defaults: { category: 'help' }, as: 'help_support'
@@ -94,7 +94,7 @@ Rails.application.routes.draw do
   # Can be used by load balancers and uptime monitors to verify that the app is live.
   get "up" => "rails/health#show", as: :rails_health_check
 
-  # Render dynamic PWA files from app/views/pwa/* (remember to link manifest in application.html.erb)
+  # PWA (optional, currently commented out)
   # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
